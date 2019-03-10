@@ -881,6 +881,7 @@ GameObject:
   - component: {fileID: 1148233859}
   - component: {fileID: 1148233858}
   - component: {fileID: 1148233860}
+  - component: {fileID: 1148233861}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -963,6 +964,25 @@ MonoBehaviour:
     m_RotationOrder: 4
   jumpMultiplier: 5
   jumpKey: 32
+--- !u!114 &1148233861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1148233857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b976a442f87305945a5e99c694b8b8c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hearts:
+  - {fileID: 641880614}
+  - {fileID: 2032179657}
+  - {fileID: 20475660}
+  fullHeart: {fileID: 21300000, guid: b8aa214ed208c8e47aa5794d973b9c23, type: 3}
+  emptyHeart: {fileID: 21300002, guid: b8aa214ed208c8e47aa5794d973b9c23, type: 3}
+  gameManager: {fileID: 1749463365}
 --- !u!1 &1158310136
 GameObject:
   m_ObjectHideFlags: 0
@@ -1087,7 +1107,7 @@ PrefabInstance:
     - target: {fileID: 6384505756762024547, guid: 0f5012dbec3fa1b4d86bde24e6ba6d27,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.5921268
+      value: 2.79
       objectReference: {fileID: 0}
     - target: {fileID: 6384505756762024547, guid: 0f5012dbec3fa1b4d86bde24e6ba6d27,
         type: 3}
@@ -1154,8 +1174,36 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7438278047661188535, guid: 0f5012dbec3fa1b4d86bde24e6ba6d27,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 7438278047661188535, guid: 0f5012dbec3fa1b4d86bde24e6ba6d27,
+        type: 3}
+      propertyPath: m_Mass
+      value: 2000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f5012dbec3fa1b4d86bde24e6ba6d27, type: 3}
+--- !u!1 &1283946025 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4164523074465316614, guid: 0f5012dbec3fa1b4d86bde24e6ba6d27,
+    type: 3}
+  m_PrefabInstance: {fileID: 1283946024}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1283946026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1283946025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ad901cac6ee3b14e977b0b0d12630f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1284052294
 GameObject:
   m_ObjectHideFlags: 0
@@ -1281,6 +1329,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b08a6eab78669414b9637ff86aa26292, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 1749463365}
+  hurtDelay: 0
 --- !u!54 &1329346099
 Rigidbody:
   m_ObjectHideFlags: 0

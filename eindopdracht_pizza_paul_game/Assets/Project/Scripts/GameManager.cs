@@ -8,8 +8,6 @@ public class GameManager : MonoBehaviour
 
     public float sceneLoadDelay = 1f;
 
-
-
     public void GameIsWon()
     {
         if (gameIsWon == false)
@@ -30,10 +28,6 @@ public class GameManager : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
             
         }
-
-
-
-
     }
             
 }
