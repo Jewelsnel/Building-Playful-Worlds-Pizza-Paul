@@ -11,7 +11,7 @@ public class CountdownTimer : MonoBehaviour
     public Text TimerText;
     public GameManager gameManager;
 
- 
+    public float winningAmount =0f;
 
          
     void Start()
@@ -32,9 +32,14 @@ public class CountdownTimer : MonoBehaviour
         TimerText.text = timerString;
 
 
-        if (currentTime <= 0f)
+        if (currentTime <= 0f && Score.scoreAmount >=winningAmount)
         {
             gameManager.GameIsWon();
+        }
+
+        else if (currentTime <=0 && Score.scoreAmount <= winningAmount)
+        {
+            gameManager.GameHasEnded();
         }
 
 

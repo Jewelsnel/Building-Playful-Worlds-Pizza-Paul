@@ -18,7 +18,7 @@ public class PlayerCollision : MonoBehaviour
 
     void Hurt()
     {
-        LivesScript.numOfHearts -= 1;
+        LivesScript.health -= 1;
     }
 
 }
