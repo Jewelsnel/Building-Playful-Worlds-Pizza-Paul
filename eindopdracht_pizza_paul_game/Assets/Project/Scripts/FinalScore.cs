@@ -1,22 +1,20 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.UI;
 
-public class HighScore : MonoBehaviour
+public class FinalScore : MonoBehaviour
 {
-
-    Text finalAmount;
-
+    Text finalScore;
 
     void Start()
     {
-        finalAmount = GetComponent<Text>();
-
+        finalScore = GetComponent<Text>();
     }
-
 
 
     public void Update()
     {
-        finalAmount.text = "" + Score.scoreAmount;
+        finalScore.text = "" + Score.scoreAmount;
     }
 }
