@@ -10,7 +10,7 @@ public class PlayerCollision : MonoBehaviour
 
     void OnCollisionEnter(Collision collisionInfo)
     {
-        if (collisionInfo.collider.name == "Enemy")
+        if (collisionInfo.collider.name == "Car")
         {
             Invoke("Hurt", hurtDelay);
         }
