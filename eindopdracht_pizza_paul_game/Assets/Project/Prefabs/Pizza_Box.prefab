@@ -92,5 +92,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 10
   range: 50
-  pizza: {fileID: 3823965198026992268, guid: 0034b59a950e77949b90a518f69b375c, type: 3}
-  fpsCam: {fileID: 0}
+  pizza: {fileID: 4379049281875766977, guid: c2d47e677e4df97418ea4830236d497f, type: 3}
+  fpsCam: {fileID: 3181925750576915097, guid: b1169113a5242e147b9bace724dbc03b, type: 3}

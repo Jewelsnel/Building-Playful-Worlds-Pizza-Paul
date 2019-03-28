@@ -40,6 +40,8 @@ public class Gun : MonoBehaviour
         GameObject pizzaObject = Instantiate(pizza);
         pizzaObject.transform.position = fpsCam.transform.position;
         pizzaObject.transform.forward = fpsCam.transform.forward;
+        
+
     }
     
 }
