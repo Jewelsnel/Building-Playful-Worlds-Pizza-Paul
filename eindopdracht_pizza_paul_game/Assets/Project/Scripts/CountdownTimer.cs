@@ -39,7 +39,7 @@ public class CountdownTimer : MonoBehaviour
 
         else if (currentTime <=0 && Score.scoreAmount <= winningAmount)
         {
-            gameManager.GameHasEnded();
+            gameManager.Fired();
         }
 
 
