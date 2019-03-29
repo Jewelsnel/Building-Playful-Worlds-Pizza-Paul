@@ -54,7 +54,7 @@ public class LivesScript : MonoBehaviour
 
             if (health <= 0f)
             {
-                gameManager.GameHasEnded();
+                gameManager.DeathByCar();
             }
         }
     }

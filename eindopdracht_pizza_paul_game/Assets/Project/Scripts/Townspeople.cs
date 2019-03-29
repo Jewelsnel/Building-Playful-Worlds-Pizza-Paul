@@ -8,7 +8,7 @@ public class Townspeople : MonoBehaviour
     Renderer rend;
     public Score score;
 
-    public float health = 50f;
+    public float health = 10f;
 
     void Start()
     {

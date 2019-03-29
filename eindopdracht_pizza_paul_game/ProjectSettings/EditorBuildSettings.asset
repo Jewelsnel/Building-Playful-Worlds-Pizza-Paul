@@ -21,6 +21,6 @@ EditorBuildSettings:
     path: Assets/Project/Scenes/NotEnoughPizza.unity
     guid: fff77b36cff6402489c9a7028107305b
   - enabled: 0
-    path: Assets/Project/Scenes/Main Menu.unity
-    guid: 53d7e93badc65a94b9a6781bc978eeb5
+    path: 
+    guid: 00000000000000000000000000000000
   m_configObjects: {}
