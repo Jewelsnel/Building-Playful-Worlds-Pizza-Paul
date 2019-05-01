@@ -13,10 +13,26 @@ public class CountdownTimer : MonoBehaviour
 
     public float winningAmount =0f;
 
-         
+    public AudioClip CrisisClip;
+    public AudioSource CrisisSound;
+
+    public int IsAudioPlaying = 1;
+
+    public int NumberOfSeconds;
+
+    public Color CrisisColor;
+
+
+
+
+
+
     void Start()
     {
         currentTime = startingTime;
+
+        CrisisSound.clip = CrisisClip;
+
     }
 
     public void Update()
@@ -31,6 +47,13 @@ public class CountdownTimer : MonoBehaviour
 
         TimerText.text = timerString;
 
+        
+
+        if (currentTime <= 12f && IsAudioPlaying == 1)
+        {
+            StartCoroutine(Crisis());
+           
+        }
 
         if (currentTime <= 0f && Score.scoreAmount >=winningAmount)
         {
@@ -43,6 +66,17 @@ public class CountdownTimer : MonoBehaviour
         }
 
 
+    }
+
+    private IEnumerator Crisis()
+    {
+        //Debug.Log("Aftellen");
+        IsAudioPlaying = 0;
+        yield return new WaitForSeconds (NumberOfSeconds);
+        CrisisSound.Play();
+        TimerText.color = CrisisColor;
+        TimerText.rectTransform.sizeDelta = new Vector2(340, 240);
+        IsAudioPlaying = 1;
     }
 
 

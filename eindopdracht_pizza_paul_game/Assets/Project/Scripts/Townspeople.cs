@@ -10,11 +10,16 @@ public class Townspeople : MonoBehaviour
 
     public float health = 10f;
 
+    public AudioClip CheerClip;
+    public AudioSource Cheer;
+
     void Start()
     {
         rend = GetComponent<Renderer>();
         rend.enabled = true;
         rend.sharedMaterial = material[0];
+        Cheer.clip = CheerClip;
+
     }
 
 
@@ -25,6 +30,7 @@ public class Townspeople : MonoBehaviour
         {
             FullStomache();
             Score.scoreAmount += 1;
+            Cheer.Play();
 
         }
 
