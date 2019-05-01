@@ -9772,6 +9772,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 428955405}
   m_PrefabAsset: {fileID: 0}
+--- !u!82 &1373000720 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 8428477726921110198, guid: c36fa124f21b4524aa21df316745bda6,
+    type: 3}
+  m_PrefabInstance: {fileID: 5348086136516556316}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1390399765 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3752197351525554929, guid: 484ea5236d64b684098150673dad32f0,
@@ -15135,11 +15141,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5126c0a8da955f47a4823e7fabef985, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingTime: 15
+  startingTime: 60
   TimerText: {fileID: 1989433741}
   gameManager: {fileID: 1749463365}
   winningAmount: 5
   CrisisClip: {fileID: 8300000, guid: 9100a3db3083a1945b73150f041cbbe7, type: 3}
+  TimeStop: {fileID: 8300000, guid: 7b1146b3c5f4d7b4d847f9bfddf33751, type: 3}
   CrisisSound: {fileID: 1989433744}
   IsAudioPlaying: 1
   NumberOfSeconds: 1
@@ -16505,7 +16512,13 @@ PrefabInstance:
       propertyPath: hurtDelay
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 7354449238478779683, guid: c36fa124f21b4524aa21df316745bda6,
+        type: 3}
+      propertyPath: Shooting
+      value: 
+      objectReference: {fileID: 1373000720}
+    m_RemovedComponents:
+    - {fileID: 7354449238738303315, guid: c36fa124f21b4524aa21df316745bda6, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c36fa124f21b4524aa21df316745bda6, type: 3}
 --- !u!1001 &7147525100410070098
 PrefabInstance:

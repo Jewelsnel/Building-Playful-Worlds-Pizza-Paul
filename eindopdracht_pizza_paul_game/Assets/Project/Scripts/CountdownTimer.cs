@@ -14,7 +14,11 @@ public class CountdownTimer : MonoBehaviour
     public float winningAmount =0f;
 
     public AudioClip CrisisClip;
+
+    public AudioClip TimeStop;
+
     public AudioSource CrisisSound;
+    
 
     public int IsAudioPlaying = 1;
 
@@ -49,10 +53,15 @@ public class CountdownTimer : MonoBehaviour
 
         
 
-        if (currentTime <= 12f && IsAudioPlaying == 1)
+        if (currentTime <= 12f && currentTime >= 2f && IsAudioPlaying == 1)
         {
             StartCoroutine(Crisis());
            
+        }
+
+        else if (currentTime <= 2f)
+        {
+            CrisisSound.clip = TimeStop;
         }
 
         if (currentTime <= 0f && Score.scoreAmount >=winningAmount)
@@ -64,6 +73,10 @@ public class CountdownTimer : MonoBehaviour
         {
             gameManager.Fired();
         }
+
+
+        
+
 
 
     }

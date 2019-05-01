@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3116987017141150125}
   - component: {fileID: 3116987017141150124}
-  - component: {fileID: 3116987017141150127}
   - component: {fileID: 3116987017141150122}
   - component: {fileID: 3116987017141150123}
   m_Layer: 0
@@ -77,14 +76,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &3116987017141150127
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3116987017141150126}
-  m_Enabled: 1
 --- !u!114 &3116987017141150122
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -167,6 +158,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3116987017141150125}
     m_Modifications:
+    - target: {fileID: 1584096303, guid: 16032a1e3561152479bd80728eb19735, type: 3}
+      propertyPath: m_Name
+      value: Pizza_Box
+      objectReference: {fileID: 0}
     - target: {fileID: 1125222004, guid: 16032a1e3561152479bd80728eb19735, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.4426925
@@ -210,10 +205,6 @@ PrefabInstance:
     - target: {fileID: 1125222004, guid: 16032a1e3561152479bd80728eb19735, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 8.514
-      objectReference: {fileID: 0}
-    - target: {fileID: 1584096303, guid: 16032a1e3561152479bd80728eb19735, type: 3}
-      propertyPath: m_Name
-      value: Pizza_Box
       objectReference: {fileID: 0}
     - target: {fileID: 1584096306, guid: 16032a1e3561152479bd80728eb19735, type: 3}
       propertyPath: fpsCam

@@ -29,7 +29,8 @@ public class Gun : MonoBehaviour
         {
             Shoot();
             PizzaShot();
-            Shooting.Play();
+            ShotsFired();
+            
             
         }
     }
@@ -55,6 +56,11 @@ public class Gun : MonoBehaviour
         pizzaObject.transform.forward = fpsCam.transform.forward;
         
 
+    }
+
+    private void ShotsFired()
+    {
+        Shooting.Play();
     }
     
 }
