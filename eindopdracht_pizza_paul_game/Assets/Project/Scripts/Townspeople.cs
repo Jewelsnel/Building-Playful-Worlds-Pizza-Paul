@@ -7,6 +7,7 @@ public class Townspeople : MonoBehaviour
     public Material[] material;
     Renderer rend;
     public Score score;
+    public ParticleSystem happyParticles;
 
     public float health = 10f;
 
@@ -19,6 +20,7 @@ public class Townspeople : MonoBehaviour
         rend.enabled = true;
         rend.sharedMaterial = material[0];
         Cheer.clip = CheerClip;
+        happyParticles.Stop();
 
     }
 
@@ -31,6 +33,7 @@ public class Townspeople : MonoBehaviour
             FullStomache();
             Score.scoreAmount += 1;
             Cheer.Play();
+            
 
         }
 
@@ -38,9 +41,11 @@ public class Townspeople : MonoBehaviour
 
     private void FullStomache ()
     {
-        
+        happyParticles.Play();
         rend.sharedMaterial = material[1];
         
+
+
 
 
     }

@@ -9,7 +9,18 @@ public class Gun : MonoBehaviour
     public float range = 50f;
     public GameObject pizza;
 
+    public AudioClip ShootingClip;
+    public AudioSource Shooting;
+
     public Camera fpsCam;
+
+    private void Start()
+    {
+        
+        Shooting.clip = ShootingClip;
+        Shooting.volume = 0.05f;
+
+    }
 
     // Update is called once per frame
     void Update()
@@ -18,6 +29,8 @@ public class Gun : MonoBehaviour
         {
             Shoot();
             PizzaShot();
+            Shooting.Play();
+            
         }
     }
 
